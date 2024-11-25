@@ -258,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `personne` (
   PRIMARY KEY (`id_personne`)
 ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table cinema_alexandre.personne : ~35 rows (environ)
+-- Listage des données de la table cinema_alexandre.personne : ~36 rows (environ)
 REPLACE INTO `personne` (`id_personne`, `prenom_personne`, `nom_personne`, `genre_personne`, `date_naissance_personne`) VALUES
 	(1, 'John G.', 'Avildsen', 'Homme', '1935-12-21'),
 	(2, 'Clint', 'Eastwood', 'Homme', '1930-05-31'),
@@ -294,7 +294,8 @@ REPLACE INTO `personne` (`id_personne`, `prenom_personne`, `nom_personne`, `genr
 	(32, 'Allison', 'Williams', 'Femme', '1988-04-13'),
 	(33, 'Diane', 'Keaton', 'Femme', '1946-01-05'),
 	(34, 'Casey', 'Affleck', 'Homme', '1975-08-12'),
-	(35, 'Michelle', 'Williams', 'Femme', '1980-09-09');
+	(35, 'Michelle', 'Williams', 'Femme', '1980-09-09'),
+	(36, 'Micka', 'Murmann', 'Homme', '2005-11-25');
 
 -- Listage de la structure de table cinema_alexandre. realisateur
 CREATE TABLE IF NOT EXISTS `realisateur` (
@@ -305,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `realisateur` (
   CONSTRAINT `FK_realisateur_personne` FOREIGN KEY (`id_personne`) REFERENCES `personne` (`id_personne`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table cinema_alexandre.realisateur : ~15 rows (environ)
+-- Listage des données de la table cinema_alexandre.realisateur : ~16 rows (environ)
 REPLACE INTO `realisateur` (`id_realisateur`, `id_personne`) VALUES
 	(1, 1),
 	(2, 2),
@@ -321,7 +322,8 @@ REPLACE INTO `realisateur` (`id_realisateur`, `id_personne`) VALUES
 	(12, 12),
 	(13, 13),
 	(14, 14),
-	(15, 34);
+	(15, 34),
+	(16, 36);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
