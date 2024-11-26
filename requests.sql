@@ -109,3 +109,11 @@ WHERE YEAR(CURDATE()) - YEAR(personne.date_naissance_personne) >= 50
 GROUP BY personne.id_personne
 
 /* Exercice 3.l */
+SELECT
+	personne.prenom_personne,
+	personne.nom_personne
+FROM acteur
+LEFT JOIN personne ON personne.id_personne = acteur.id_personne
+LEFT JOIN casting ON casting.id_acteur = acteur.id_acteur
+GROUP BY acteur.id_acteur 
+HAVING COUNT(casting.id_film) > 3
